@@ -39,7 +39,6 @@ function aer_register_recommendation() {
 			'title',
 			'thumbnail',
 			'excerpt',
-			'genesis-cpt-archives-settings',
 		),
 );
 	register_post_type( 'recommendation', $args );

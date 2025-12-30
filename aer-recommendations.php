@@ -5,7 +5,7 @@
  * Plugin URI: https://capwebsolutions.com/
  * Description: Adds the Recommendation post type for the theme.
  * Author: Cap Web Solutions
- * Version: 2.0.0
+ * Version: 2.0.1
  * Author URI: https://capwebsolutions.com/
  * Github Plugin URI: https://github.com/CapWebSolutions/aer-recommendations/
 

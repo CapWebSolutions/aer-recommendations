@@ -1,0 +1,62 @@
+/* #  Recommendations
+---------------------------------------------------------------------------------------------------- */
+
+img.author-image {
+	background-color: #f9f9f9;
+	border: 1px solid #ECECED;
+	padding: 5px;
+  }
+
+span.recommendation-image > img {
+	padding: 0 15px 0 0;
+  }
+
+div.recommendation-author {
+	font-weight: 700 !important;
+} 
+
+p.recommendation-content {
+	margin: 10px 0 28px;
+}
+
+p.recommendation-content::before {
+	content: "\201C";
+	color: #471f2c;
+	/* font-size: 30px; */
+}
+p.recommendation-content::after {
+	content: "\201D";
+	color: #471f2c;
+	/* font-size: 30px; */
+}
+article.recommendation-entry {
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+div.recommendation-tax {
+	margin-bottom: 10px;
+}
+  
+  /* # Interior Page Recommendations
+  ---------------------------------------------------------------------------------------------------- */
+  .recommendation-quote-internal p {
+	text-align: center;
+	padding: 3px 0 0 0;
+	line-height: 1.5em;
+	font-size: 24px;
+	font-style: italic;
+	margin: 10px 0 0 0;
+  }
+  
+  .recommendation-quote-internal p:before {
+	content: "\201C";
+	color: #0579B2;
+	font-size: 30px;
+  }
+  
+  .recommendation-quote-internal p:after {
+	content: "\201D";
+	color: #0579B2;
+	font-size: 30px;
+  }
+  

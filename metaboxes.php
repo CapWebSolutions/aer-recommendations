@@ -59,7 +59,3 @@ function aer_sanitize_text_callback( $value ) {
 	$value = strip_tags( $value, '<p><a><br><br/>' );
     return $value;
 }
-// add_filter( 'rwmb_media_add_string', 'aer_change_add_string' );
-// function aer_change_add_string() {
-//     return '+ Profile Photo';
-// }

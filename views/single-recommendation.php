@@ -8,9 +8,6 @@
  *
  */
 
-remove_action( 'essence_entry_header', 'genesis_post_info', 10 );
-
-add_action( 'genesis_entry_header', 'aer_recommendation_info', 10 );
 function aer_recommendation_info() {
 
 	global $post;
@@ -29,10 +26,7 @@ function aer_recommendation_info() {
 	$recommendation_url = get_post_meta( $post_id, $prefix . 'author_url', true );
 	$recommendation_class = strip_tags( get_the_term_list( get_the_ID(), 'classification', '', ', ', '' ) );
 
-	// echo '<img src="', $recommendation_image['url'], '">';
-
 	If ( $recommendation_image['url'] ) $recommendation_entry .= sprintf('<span class="alignleft recommendation-image"><img src="%s"></span>', $recommendation_image['url'] );
-
 
 	$recommendation_entry .= sprintf('<p class="recommendation-content">%s</p><div class="recommendation-author">%s</div>', $recommendation_content, $recommendation_author );
 
@@ -53,4 +47,3 @@ function aer_recommendation_info() {
 	printf( '<article class="recommendation-entry">%s</article>', $recommendation_entry  );
 
 }
-genesis();

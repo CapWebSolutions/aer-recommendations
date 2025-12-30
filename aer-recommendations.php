@@ -5,8 +5,10 @@
  * Plugin URI: https://capwebsolutions.com/
  * Description: Adds the Recommendation post type for the theme.
  * Author: Cap Web Solutions
- * Version: 1.0.0
+ * Version: 2.0.0
  * Author URI: https://capwebsolutions.com/
+ * Github Plugin URI: https://github.com/CapWebSolutions/aer-recommendations/
+
  * 
  *
  */
@@ -123,43 +125,16 @@ function aer_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 
-
-
-
 // Get all the things
 require_once( dirname( __FILE__ ) . '/post-types.php' );
 require_once( dirname( __FILE__ ) . '/metaboxes.php' );
-// require_once( dirname( __FILE__ ) . '/metaboxes-block.php' );
 require_once( dirname( __FILE__ ) . '/taxonomies.php' );
 require_once( dirname( __FILE__ ) . '/helper-functions.php' );
 
 // Enqueue Scripts and Styles.
 add_action( 'wp_enqueue_scripts', 'aer_recommendations_enqueue_scripts_styles', PHP_INT_MAX );
 function aer_recommendations_enqueue_scripts_styles() {
-
 	wp_enqueue_style( 'aer-recommendations', AER_RECOMMENDATION_URL . 'assets/css/aer-recommendations.css', array(), '0.1.0' );
-
-}
-
-// Load Translations
-add_action( 'plugins_loaded', 'aer_recommendations_init' );
-function aer_recommendations_init() {
-	load_plugin_textdomain( 'aer-recommendations', false, 'aer-recommendations/languages' );
 }
 
 adds_new_recommendations_image_sizes();
-
-// Set up templates for new post type
-add_filter( 'archive_template', 'load_archive_template' );
-// add_filter( 'archive_template', 'load_taxonomy_archive_template', 11 );
-add_filter( 'single_template', 'load_single_template' );
-
-
-add_action( 'genesis_after_header', 'cws_remove_post_info' );
-/**
- * Removes the entry post info on recommendation post type.
- */
-function cws_remove_post_info() {
-	remove_action( 'essence_entry_header', 'genesis_post_info' );
-}
-
